@@ -1,0 +1,44 @@
+{
+    "plugins": ["prettier", "react", "react-hooks"],
+    "env": {
+      "browser": true,
+      "es6": true,
+      "jest": true
+    },
+    "extends": [
+      "plugin:prettier/recommended",
+      "react-app",
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "settings": {
+      "import/resolver": {
+        "babel-module": {}
+      }
+    },
+    "parser": "babel-eslint",
+    "rules": { 
+      "curly": "error",
+      "jsx-quotes": ["warn", "prefer-double"],
+      "key-spacing": ["error", { "mode": "minimum" }],
+      "no-unneeded-ternary": "error",
+      "no-unused-expressions": ["error", { "allowShortCircuit": true }],
+      "no-use-before-define": ["error", "nofunc"],
+      "prettier/prettier": "error",
+      "react/jsx-pascal-case": ["error", { "allowAllCaps": false }],
+      "react/jsx-uses-vars": "error",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    },
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    }
+  }
