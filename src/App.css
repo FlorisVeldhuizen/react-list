@@ -32,6 +32,17 @@
   text-decoration: line-through;
 }
 
+.list-item{
+  background: #eee;
+  display: inline-block;
+  width:40vw;
+  margin:15px;
+  padding: 15px;
+}
+.list-item button {
+  display: inline-block;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

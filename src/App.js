@@ -64,9 +64,9 @@ List.propTypes = {
 function ListItem(props) {
   const [checked, setChecked] = useState(false);
   return (
-    <li>
-      <p className={checked ? "strikethrough" : null}>
-        {props.content}
+    <li className="list-item">
+      <p>
+        <span className={checked ? "strikethrough" : null}>{props.content}</span>
         {checked && " ✅"}
       </p>
       <button
@@ -95,8 +95,10 @@ ListItem.propTypes = {
 function AddItems(props) {
   const handleSubmit = e => {
     e.preventDefault();
-    props.handleSubmit(e);
-    e.target.elements.whycantInamethisitem.value = "";
+    if (e.target.elements.whycantInamethisitem.value) {
+      props.handleSubmit(e);
+      e.target.elements.whycantInamethisitem.value = "";
+    }
   };
   return (
     <form onSubmit={handleSubmit}>
